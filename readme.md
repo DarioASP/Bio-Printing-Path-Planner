@@ -37,7 +37,7 @@ python slerp.py
 - The blue line represents the interpolated spatial trajectory.
 - The red arrows represent the interpolated orientation of the printhead along the path.
 
-![Interpolated Trajectory](final_plot.png)
+![Interpolated Trajectory](images/final_plot.png)
 
 ## Main Functions
 
