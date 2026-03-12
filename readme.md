@@ -15,6 +15,19 @@ The main workflow is:
 5. **Interpolate positions with LERP** and orientations with SLERP** to obtain a smooth, denser trajectory for execution or visualization.
 
 ## Requirements
-
+This project uses Python and the following libraries:
 ```bash
 pip install numpy matplotlib numpy-stl scipy
+```
+## Usage
+
+1. Place your STL file in the root directory of the project.
+2. Make sure the script points to the correct STL filename.
+3. Run the program:
+```bash
+python slerp.py
+```
+
+## Visual Results
+1. Original Mesh
+![alt text](image.png)
