@@ -29,5 +29,38 @@ python slerp.py
 ```
 
 ## Visual Results
+
 1. Original Mesh
 ![Original Mesh](images/ring.png)
+
+2. Interpolated Trajectory and Orientation
+- The blue line represents the interpolated spatial trajectory.
+- The red arrows represent the interpolated orientation of the printhead along the path.
+
+![Interpolated Trajectory](final_plot.png)
+
+## Main Functions
+
+**quat_from_two_vectors(u, v):** Computes the quaternion that rotates a reference vector into a target normal vector.
+
+**slerp_quat(q0, q1, t):** Interpolates smoothly between two unit quaternions.
+
+**KDTree_sort(centers, quats):** Sorts the mesh centers and corresponding quaternions using a nearest-neighbor approach based on KDTree.
+
+**interpolate_full_trajectory(centers_ord, quats_ord, factor_densidad=10):** Generates intermediate trajectory points by applying:
+
+- LERP to the positions.
+- SLERP to the orientations.
+
+**visualize_final_result(pos_interp, quat_interp):** Displays the interpolated 3D path and the corresponding orientation vectors.
+
+## Research Context
+This work was developed as part of a research documentation effort for bio-printing applications, with emphasis on smooth trajectory generation over curved surfaces and stable orientation control using quaternion-based interpolation.
+
+## Future Work
+Possible extensions of this project include:
+
+- Exporting the generated trajectory to a robot-readable format.
+- Adding support for multiple mesh topologies.
+- Improving path optimization for large-scale meshes.
+- Integrating the planner into a robotic bio-printing pipeline
