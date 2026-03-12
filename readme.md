@@ -30,4 +30,4 @@ python slerp.py
 
 ## Visual Results
 1. Original Mesh
-`images/original_mesh_normals.png`
+![Original Mesh](images/ring.png)
